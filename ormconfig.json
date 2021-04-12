@@ -1,0 +1,15 @@
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "postgres",
+  "password": "",
+  "database": "route_demo",
+  "entities": [
+    "/Users/l000777/Lucas-Truong/PROJECTS/Afilabs/route-demo/src/config/../**/*.entity{.ts,.js}"
+  ],
+  "migrationsTableName": "migration",
+  "migrations": [
+    "src/migration/*.ts"
+  ]
+}
