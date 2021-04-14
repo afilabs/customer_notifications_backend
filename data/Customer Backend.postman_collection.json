@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "46aceea3-930a-4f90-b745-8fed92e37257",
+		"name": "Customer Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DEMO",
+			"item": [
+				{
+					"name": "Customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Tracy McDonald 22\",\n    \"phone\": \"+17789188954\",\n    \"address1\": \"1400 Columbia St, San Diego, CA\",\n    \"address2\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stop By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/stops/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"stops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Stop By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tracy McDonald 22\",\n    \"address\": \"1400 Columbia St, San Diego, CA\",\n    \"eta\": \"09:00\",\n    \"phone\": \"+17789188954\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/stops/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"stops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send ETA to customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msg\": \"Default\",\n    \"address\": \"1400 Columbia St, San Diego, CA\",\n    \"eta\": \"09:00\",\n    \"phone\": \"+17789188954\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/send-eta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"send-eta"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
