@@ -6,7 +6,7 @@ require('dotenv').config();
 class ConfigService {
   constructor(private env: { [k: string]: string | undefined }) {}
 
-  private getValue(key: string, throwOnMissing = true): string {
+  public getValue(key: string, throwOnMissing = true): string {
     const value = this.env[key];
     // if (!value && throwOnMissing) {
     //   throw new Error(`config error - missing env.${key}`);
@@ -55,6 +55,8 @@ const configService = new ConfigService(process.env).ensureValues([
   'POSTGRES_USER',
   'POSTGRES_PASSWORD',
   'POSTGRES_DATABASE',
+  'TWILIO_ACCOUNT_SID',
+  'TWILIO_AUTH_TOKEN',
 ]);
 
 export { configService };

@@ -1,4 +1,4 @@
-import { Controller, Put, Body, Param } from '@nestjs/common';
+import { Controller, Put, Post, Body, Param } from '@nestjs/common';
 import { CustomersService } from '../services/customers.service';
 import { UpdateCustomerDto } from '../dto/update-customer.dto';
 import { SendEtaCustomerDto } from '../dto/send-eta-customer.dto';
@@ -7,11 +7,10 @@ import { SendEtaCustomerDto } from '../dto/send-eta-customer.dto';
 export class CustomersController {
   constructor(private readonly customersService: CustomersService) {}
 
-  // @Post('send-eta')
-  // sendEta(@Body() sendEtaCustomerDto: SendEtaCustomerDto) {
-  //   return 1;
-  //   // return this.customersService.sendEta(sendEtaCustomerDto);
-  // }
+  @Post('send-eta')
+  sendEta(@Body() sendEtaCustomerDto: SendEtaCustomerDto) {
+    return this.customersService.sendEta(sendEtaCustomerDto);
+  }
 
   @Put(':id')
   async update(
