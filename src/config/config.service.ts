@@ -42,9 +42,16 @@ class ConfigService {
 
       migrationsTableName: 'migration',
       migrations: [__dirname + '/../src/migration/*.ts'],
+      // migrations: ['src/migration/*.ts'],
       // cli: {
       //   migrationsDir: 'src/migration',
       // },
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
     };
   }
 }
