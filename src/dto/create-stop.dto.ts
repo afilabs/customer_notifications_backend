@@ -8,6 +8,12 @@ export class CreateStopDto {
   address?: string;
 
   @IsOptional()
+  lat?: number;
+
+  @IsOptional()
+  lng?: number;
+
+  @IsOptional()
   eta?: string;
 
   @IsOptional()

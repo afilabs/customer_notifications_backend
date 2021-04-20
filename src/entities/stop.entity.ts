@@ -12,6 +12,12 @@ export class Stop {
   address: string;
 
   @Column()
+  lat: number;
+
+  @Column()
+  lng: number;
+
+  @Column()
   eta: string;
 
   @Column()
