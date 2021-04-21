@@ -22,4 +22,7 @@ export class Stop {
 
   @Column()
   phone: string;
+
+  @Column()
+  email: string;
 }
