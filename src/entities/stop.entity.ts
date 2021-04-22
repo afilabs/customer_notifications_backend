@@ -1,5 +1,14 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
+class ColumnNumericTransformer {
+  to(data: number): number {
+    return data;
+  }
+  from(data: string): number {
+    return parseFloat(data);
+  }
+}
+
 @Entity()
 export class Stop {
   @PrimaryGeneratedColumn()
@@ -11,10 +20,14 @@ export class Stop {
   @Column()
   address: string;
 
-  @Column()
+  @Column('numeric', {
+    transformer: new ColumnNumericTransformer(),
+  })
   lat: number;
 
-  @Column()
+  @Column('numeric', {
+    transformer: new ColumnNumericTransformer(),
+  })
   lng: number;
 
   @Column()
