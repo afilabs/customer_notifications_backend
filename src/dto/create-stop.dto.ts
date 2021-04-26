@@ -7,11 +7,20 @@ export class CreateStopDto {
   @IsOptional()
   address?: string;
 
-  @IsOptional()
-  lat?: number;
+  @IsNotEmpty()
+  lat: number;
 
-  @IsOptional()
-  lng?: number;
+  @IsNotEmpty()
+  lng: number;
+
+  @IsNotEmpty()
+  driverLat: number;
+
+  @IsNotEmpty()
+  driverLng: number;
+
+  @IsNotEmpty()
+  driverTimezone: string;
 
   @IsOptional()
   eta?: string;

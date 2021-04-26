@@ -30,6 +30,19 @@ export class Stop {
   })
   lng: number;
 
+  @Column('numeric', {
+    transformer: new ColumnNumericTransformer(),
+  })
+  driverLat: number;
+
+  @Column('numeric', {
+    transformer: new ColumnNumericTransformer(),
+  })
+  driverLng: number;
+
+  @Column()
+  driverTimezone: string;
+
   @Column()
   eta: string;
 
