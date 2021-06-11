@@ -30,7 +30,7 @@ export class CustomersService {
     await this.customersRepository.delete(id);
   }
 
-  async sendEta(sendEtaCustomerDto: SendEtaCustomerDto) {
+  async sendEta(sendEtaCustomerDto: SendEtaCustomerDto, toPhone: string) {
     const client = Twilio(
       configService.getValue('TWILIO_ACCOUNT_SID'),
       configService.getValue('TWILIO_AUTH_TOKEN'),
@@ -38,7 +38,7 @@ export class CustomersService {
     const response = client.messages.create({
       body: sendEtaCustomerDto.msg,
       from: '+15017122661',
-      to: '+15558675310',
+      to: toPhone,
     });
     //.then((message) => console.log(message.sid));
     return { msg: 'Successfully :)' };

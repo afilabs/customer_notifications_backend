@@ -8,8 +8,9 @@ export class CustomersController {
   constructor(private readonly customersService: CustomersService) {}
 
   @Post('send-eta')
-  sendEta(@Body() sendEtaCustomerDto: SendEtaCustomerDto) {
-    return this.customersService.sendEta(sendEtaCustomerDto);
+  async sendEta(@Body() sendEtaCustomerDto: SendEtaCustomerDto) {
+    const customer = await this.customersService.findOne(1);
+    return this.customersService.sendEta(sendEtaCustomerDto, customer.phone);
   }
 
   @Put(':id')
