@@ -10,6 +10,7 @@ export class CustomersController {
   @Post('send-eta')
   async sendEta(@Body() sendEtaCustomerDto: SendEtaCustomerDto) {
     const customer = await this.customersService.findOne(1);
+
     return this.customersService.sendEta(sendEtaCustomerDto, customer.phone);
   }
 
