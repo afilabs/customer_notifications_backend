@@ -1,78 +1,21 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# customer_notifications_backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Customer Notifications Backend](https://blog.afi.io/content/images/size/w1600/2021/05/Screen-Shot-2021-05-08-at-10.07.23-PM.png "Customer Notifications Backend")
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Taken from: 
+Taken from: 
+- [Using the Google Maps API to get Driver ETAs (Part 1 of 2)](https://blog.afi.io/using-the-google-maps-api-to-get-driver-etas/)
+- [Using Twilio to Send ETA Notifications to your Customers (Part 2 of 2)](https://blog.afi.io/using-the-twilio-api-to-send-eta-notifications-to-your-customers/)
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
+ How to run the app:
+ 1. cd into your project
+ 2. Install packages by running `yarn` and enter `yarn start` to run the app in development mode.
+ 3. Create a `.env` file in the root folder and add the following lines of code (be sure to replace the placeholder text with your actual API keys)
 ```
-
-## Running the app
-
-```bash
-# init DB
-$ npm run pretypeorm
-$ npm run typeorm:migration:generate -- my_init
-$ npm run typeorm:migration:run
-
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+TWILIO_ACCOUNT_SID='TWILIO_SID'
+TWILIO_AUTH_TOKEN='TWILIO_TOKEN'
+GOOGLE_API_KEY='GOOGLE_KEY'
 ```
+The `TWILIO_SID` is a 34 digit SID that starts with AC while the `TWILIO_TOKEN` is the access token that is generated [when you create an API key](https://www.twilio.com/docs/iam/access-tokens) in the Twilio console. The `GOOGLE_KEY` is retrieved from the [project you created in the Google Cloud Console](https://developers.google.com/maps/documentation/maps-static/get-api-key).
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Please contact afian@afi.io if you have any questions or suggestions. Pull requests are welcome.

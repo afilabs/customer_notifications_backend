@@ -41,6 +41,6 @@ export class CustomersService {
       to: toPhone,
     });
     //.then((message) => console.log(message.sid));
-    return { msg: 'Successfully :)' };
+    return { msg: 'Message sent successfully' };
   }
 }
